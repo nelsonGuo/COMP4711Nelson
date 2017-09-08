@@ -12,6 +12,9 @@
  * @author nelson
  */
 class Student {
+    
+    
+    //declare variables of student class
     function _construct(){
         $this->surname = '';
         $this->first_name ='';
@@ -20,13 +23,17 @@ class Student {
         
     }
     
+    // a setter to email 
     function add_email($which, $address){
         $this->emails[$which] = $address;
     }
+    
+    //a setter to grade
     function add_grade($grade) {
         $this->grades[] = $grade;
     }
     
+    //cacluates the average grade
     function average() {
     $total = 0;
     foreach ($this->grades as $value) {
@@ -36,6 +43,7 @@ class Student {
     
     }
     
+    //format the output string 
     function toString() {
     $result = $this->first_name . ' ' . $this->surname;
     $result .= ' ('.$this->average().")\n";
